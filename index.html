@@ -542,53 +542,92 @@
       </section>
 
       <!-- Lecturer panel -->
-    <section class="lecturers-section">
-        <div class="section-header">
-            <h2 class="section-title">Meet Our Lecturers</h2>
-            <p class="section-subtitle">Our distinguished faculty members bring years of experience and expertise to the classroom</p>
+    <!-- ====== LECTURERS SECTION ====== -->
+<section class="section lecturers" aria-label="lecturers">
+  <div class="container">
+
+    <p class="section-subtitle">Our Faculty</p>
+
+    <h2 class="h2 section-title">
+      Meet Our <span class="span">Lecturers</span>
+    </h2>
+
+    <p class="section-text">
+      Distinguished scholars and practitioners bringing real-world expertise to the classroom
+    </p>
+
+    <div class="grid-container"> <!-- Changed from ul to div -->
+
+      <!-- Lecturer 1 -->
+      <div class="grid-item"> <!-- Changed from li to div -->
+        <div class="lecturer-card" style="--color: 2, 85%, 43%">
+          <figure class="card-banner img-holder" style="--width: 370; --height: 300">
+            <img src="./assets/images/course-1.jpg" width="370" height="300" loading="lazy"
+              alt="Prof. John Smith" class="img-cover">
+          </figure>
+
+          <div class="card-content">
+            <h3 class="h3 card-title">Prof. John Smith</h3>
+            <p class="card-subtitle">Constitutional Law</p>
+            <p class="card-text">
+              15+ years experience in constitutional theory and human rights law.
+            </p>
+            <a href="#" class="btn-link">
+              <span class="span">Contact</span>
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+          </div>
         </div>
-        
-        <div class="lecturers-grid">
-            <!-- Lecturer 1 -->
-            <div class="lecturer-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Prof. John Smith">
-                </div>
-                <div class="card-content">
-                    <h3 class="lecturer-name">Prof. John Smith</h3>
-                    <p class="lecturer-title">Head of Constitutional Law</p>
-                    <p class="lecturer-bio">Specializing in constitutional theory with 15 years of teaching experience and numerous published works.</p>
-                    <a href="#" class="contact-link">View Contact</a>
-                </div>
-            </div>
-            
-            <!-- Lecturer 2 -->
-            <div class="lecturer-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Dr. Sarah Johnson">
-                </div>
-                <div class="card-content">
-                    <h3 class="lecturer-name">Dr. Sarah Johnson</h3>
-                    <p class="lecturer-title">International Law Expert</p>
-                    <p class="lecturer-bio">Former UN legal consultant with expertise in human rights law and international treaties.</p>
-                    <a href="#" class="contact-link">View Contact</a>
-                </div>
-            </div>
-            
-            <!-- Lecturer 3 -->
-            <div class="lecturer-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Prof. Michael Brown">
-                </div>
-                <div class="card-content">
-                    <h3 class="lecturer-name">Prof. Michael Brown</h3>
-                    <p class="lecturer-title">Corporate Law Specialist</p>
-                    <p class="lecturer-bio">Practicing attorney with 20 years experience in corporate mergers and acquisitions.</p>
-                    <a href="#" class="contact-link">View Contact</a>
-                </div>
-            </div>
+      </div>
+
+      <!-- Lecturer 2 -->
+      <div class="grid-item">
+        <div class="lecturer-card" style="--color: 351, 83%, 61%">
+          <figure class="card-banner img-holder" style="--width: 370; --height: 300">
+            <img src="./assets/images/course-2.jpg" width="370" height="300" loading="lazy"
+              alt="Dr. Sarah Johnson" class="img-cover">
+          </figure>
+
+          <div class="card-content">
+            <h3 class="h3 card-title">Dr. Sarah Johnson</h3>
+            <p class="card-subtitle">International Law</p>
+            <p class="card-text">
+              Former UN legal consultant specializing in treaty negotiations.
+            </p>
+            <a href="#" class="btn-link">
+              <span class="span">Contact</span>
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
+
+      <!-- Lecturer 3 -->
+      <div class="grid-item">
+        <div class="lecturer-card" style="--color: 170, 75%, 41%">
+          <figure class="card-banner img-holder" style="--width: 370; --height: 300">
+            <img src="./assets/images/course-3.jpg" width="370" height="300" loading="lazy"
+              alt="Prof. Michael Brown" class="img-cover">
+          </figure>
+
+          <div class="card-content">
+            <h3 class="h3 card-title">Prof. Michael Brown</h3>
+            <p class="card-subtitle">Corporate Law</p>
+            <p class="card-text">
+              Expert in M&A with 20+ years of practice in top law firms.
+            </p>
+            <a href="#" class="btn-link">
+              <span class="span">Contact</span>
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
     </article>
   </main>
