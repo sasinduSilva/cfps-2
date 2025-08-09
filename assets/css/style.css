@@ -177,6 +177,17 @@
   font-size: 18px;
   --ionicon-stroke-width: 40px;
 }
+
+.lecturers .btn-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* If you need to adjust the button specifically */
+.lecturers .btn {
+  margin-inline: auto; /* Center horizontally */
+  padding: 12px 24px; /* Adjust if needed */
+}
 /*-----------------------------------*\
   #LECTURERS
 \*-----------------------------------*/
