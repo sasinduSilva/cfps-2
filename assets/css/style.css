@@ -108,7 +108,7 @@
 \*-----------------------------------*/
 
 .lecturers {
-  background-color: var(--isabelline);
+  background-color: var(--white);
 }
 
 .grid-container {
@@ -192,6 +192,143 @@
   #LECTURERS
 \*-----------------------------------*/
 
+/*-----------------------------------*\
+  #FAQ SECTION
+\*-----------------------------------*/
+
+.faq {
+  background-color: var(--white);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.faq-item {
+  border: 1px solid var(--platinum);
+  border-radius: var(--radius-10);
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition-1);
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow-2);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--ff-league_spartan);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  color: var(--eerie-black-1);
+  transition: var(--transition-1);
+}
+
+.faq-question:hover {
+  background-color: var(--isabelline);
+}
+
+.toggle-icon {
+  display: flex;
+  color: var(--kappel);
+}
+
+.close-icon {
+  display: none;
+}
+
+.faq-answer {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  font-size: var(--fs-6);
+  color: var(--gray-web);
+}
+
+.faq-item.active .faq-answer {
+  padding: 0 20px 20px;
+  max-height: 500px;
+}
+
+.faq-item.active .open-icon {
+  display: none;
+}
+
+.faq-item.active .close-icon {
+  display: block;
+}
+
+.support-cta {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid var(--platinum);
+}
+
+.support-cta p {
+  margin-bottom: 20px;
+  font-size: var(--fs-5);
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.phone-cta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-3);
+  color: var(--gray-web);
+}
+
+.phone-number {
+  color: var(--kappel);
+  font-weight: var(--fw-600);
+  text-decoration: none;
+  transition: var(--transition-1);
+  font-family: var(--ff-league_spartan);
+}
+
+.phone-number:hover {
+  color: var(--radical-red);
+  text-decoration: underline;
+}
+
+/* Responsive adjustment */
+@media (max-width: 575px) {
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .phone-cta {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/*-----------------------------------*\
+  #FAQ SECTION
+\*-----------------------------------*/
 
 
 /*-----------------------------------*\

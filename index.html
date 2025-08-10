@@ -79,11 +79,15 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#courses" class="navbar-link" data-nav-link>Courses</a>
+            <a href="#programmes" class="navbar-link" data-nav-link>Programmes</a>
           </li>
 
           <li class="navbar-item">
             <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#faq" class="navbar-link" data-nav-link>FAQ</a>
           </li>
 
           <li class="navbar-item">
@@ -184,7 +188,7 @@
         - #CATEGORY
       -->
 
-      <section class="section category" aria-label="category">
+      <section class="section category" id="programmes" aria-label="category">
         <div class="container">
 
           <!-- <p class="section-subtitle">Programmes</p> -->
@@ -429,7 +433,7 @@
 
 
       <!-- 
-        - #COURSE
+        - #EVENTS
       -->
 
       <section class="section course" id="courses" aria-label="course">
@@ -638,6 +642,116 @@
   
 </section>
 
+<!-- FAQ Section -->
+
+<!-- ====== FAQ SECTION ====== -->
+<section class="section faq" id="faq" aria-label="frequently asked questions">
+  <div class="container">
+
+    <p class="section-subtitle">Need Help?</p>
+
+    <h2 class="h2 section-title">
+      Frequently Asked <span class="span">Questions</span>
+    </h2>
+
+    <p class="section-text">
+      Find quick answers to common questions about our programs and admissions
+    </p>
+
+    <div class="faq-container">
+      <!-- FAQ Item 1 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span class="question-text">What are the admission requirements?</span>
+          <span class="toggle-icon">
+            <ion-icon name="add-outline" class="open-icon"></ion-icon>
+            <ion-icon name="remove-outline" class="close-icon"></ion-icon>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p>Our admission requirements include a completed application form, official transcripts, a personal statement, and two letters of recommendation. Specific requirements may vary by program.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span class="question-text">When is the application deadline?</span>
+          <span class="toggle-icon">
+            <ion-icon name="add-outline" class="open-icon"></ion-icon>
+            <ion-icon name="remove-outline" class="close-icon"></ion-icon>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p>Application deadlines vary by program. For most programs, the fall semester deadline is June 15th and the spring semester deadline is November 15th.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span class="question-text">Are scholarships available?</span>
+          <span class="toggle-icon">
+            <ion-icon name="add-outline" class="open-icon"></ion-icon>
+            <ion-icon name="remove-outline" class="close-icon"></ion-icon>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, we offer several scholarship opportunities based on academic merit and financial need. Some programs also offer assistantships and fellowships.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span class="question-text">Can I visit the campus before applying?</span>
+          <span class="toggle-icon">
+            <ion-icon name="add-outline" class="open-icon"></ion-icon>
+            <ion-icon name="remove-outline" class="close-icon"></ion-icon>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p>Absolutely! We encourage prospective students to schedule a campus tour through our admissions office. Virtual tours are also available.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span class="question-text">What support services are available?</span>
+          <span class="toggle-icon">
+            <ion-icon name="add-outline" class="open-icon"></ion-icon>
+            <ion-icon name="remove-outline" class="close-icon"></ion-icon>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p>We offer academic advising, career counseling, writing support, disability services, and tutoring. Our student success center provides comprehensive support.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Support CTA -->
+    <div class="support-cta">
+    <p>Still have questions? Contact our admissions team:</p>
+    
+    <div class="cta-buttons">
+      <a href="mailto:admissions@youruniversity.edu" class="btn has-before">
+        <span class="span">Email Admissions</span>
+        <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+      </a>
+      
+      <div class="phone-cta">
+        <span>or Call us on</span>
+        <a href="tel:0772244239" class="phone-number">077 224 4239</a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+<!-- FAQ Section -->
+
     </article>
   </main>
 
@@ -657,7 +771,7 @@
         <div class="footer-brand">
 
           <a href="#" class="logo">
-            <img src="./assets/images/logo-light.svg" width="162" height="50" alt="EduWeb logo">
+            <img src="./assets/images/cfps_logo-no-bg.png" width="162" height="50" alt="EduWeb logo">
           </a>
 
           <p class="footer-brand-text">
@@ -843,6 +957,23 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+  // FAQ Accordion Functionality
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const faqItem = button.parentElement;
+      faqItem.classList.toggle('active');
+      
+      // Close other open items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        if (item !== faqItem && item.classList.contains('active')) {
+          item.classList.remove('active');
+        }
+      });
+    });
+  });
+</script>
 
 </body>
 
