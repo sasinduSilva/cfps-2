@@ -330,6 +330,129 @@
   #FAQ SECTION
 \*-----------------------------------*/
 
+/*-----------------------------------*\
+  #PROGRAMMES
+\*-----------------------------------*/
+
+.programmes {
+  background-color: var(--isabelline);
+}
+
+.programmes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.programme-card {
+  background-color: var(--white);
+  border-radius: var(--radius-10);
+  padding: 30px;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.programme-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-3);
+}
+
+.programme-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: hsl(var(--color));
+}
+
+.programme-card .card-icon {
+  width: 60px;
+  height: 60px;
+  background-color: hsla(var(--color), 0.1);
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-circle);
+  margin-bottom: 20px;
+  color: hsl(var(--color));
+  font-size: 30px;
+}
+
+.programme-card .card-title {
+  color: var(--eerie-black-1);
+  margin-bottom: 15px;
+  font-size: var(--fs-4);
+}
+
+.programme-card .card-text {
+  color: var(--gray-web);
+  font-size: var(--fs-6);
+  margin-bottom: 20px;
+}
+
+.programme-card .card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.programme-card .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--fs-7);
+  color: var(--eerie-black-1);
+}
+
+.programme-card .meta-item ion-icon {
+  color: hsl(var(--color));
+}
+
+.programme-card .card-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: hsl(var(--color));
+  font-weight: var(--fw-600);
+  font-family: var(--ff-league_spartan);
+  transition: var(--transition-1);
+}
+
+.programme-card .card-link:hover {
+  color: var(--eerie-black-1);
+  gap: 12px;
+}
+
+.programme-card .card-link ion-icon {
+  font-size: 16px;
+}
+
+.programmes-cta {
+  text-align: center;
+  margin-top: 50px;
+  
+  
+  
+}
+
+.programmes-cta .btn {
+  display: inline-flex;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .programmes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/*-----------------------------------*\
+  #PROGRAMMES
+\*-----------------------------------*/
 
 /*-----------------------------------*\
   #RESET
