@@ -10,8 +10,8 @@
     - primary meta tag
   -->
   <title>EduWeb - The Best Program to Enroll for Exchange</title>
-  <meta name="title" content="EduWeb - The Best Program to Enroll for Exchange">
-  <meta name="description" content="This is an education html template made by codewithsadee">
+  <meta name="title" content="CfPS - Path to qualify as a Lawyer">
+  <meta name="description" content="The Iconic Leader of Legal Education in Sri Lanka">
 
   <!-- 
     - favicon
@@ -63,6 +63,8 @@
             <img src="./assets/images/cfps_logo.jpg" width="162" height="50" alt="cfps logo">
           </a>
 
+          
+
           <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
             <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
           </button>
@@ -113,7 +115,7 @@
         <a href="#" class="btn has-before apply-btn" id="applyNowBtn">
           <span class="span">Apply Now</span>
 
-          <!-- <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon> -->
+          
         </a>
 
         <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
@@ -145,18 +147,18 @@
           <div class="hero-content">
 
             <h1 class="h1 section-title">
-              The Iconic Leader in <span class="span">Legal Education</span> in Sri Lanka
+              The Iconic Leader of <span class="span">Legal Education</span> in Sri Lanka
             </h1>
 
             <p class="hero-text">
               Earn the Gold Standard L.L.B from the University of London.
             </p>
 
-            <a href="#" class="btn has-before">
-              <span class="span">Find courses</span>
+            <a href="#" class="btn has-before apply-btn" id="applyNowBtn">
+          <span class="span">Apply Now</span>
 
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </a>
+          <!-- <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon> -->
+        </a>
 
           </div>
 
@@ -995,36 +997,75 @@
 <!-- Application form script -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const applyBtn = document.getElementById('applyNowBtn');
+  // Get all apply buttons (now works for any button with class 'apply-btn')
+  const applyBtns = document.querySelectorAll('.apply-btn');
   const modal = document.getElementById('applyModal');
   const closeBtn = document.getElementById('closeModalBtn');
   const overlay = document.getElementById('modalOverlay');
 
-  // Open modal
-  applyBtn.addEventListener('click', function(e) {
-    e.preventDefault();
+  // Function to open modal
+  function openModal() {
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
-  });
+  }
 
-  // Close modal
+  // Function to close modal
   function closeModal() {
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
   }
 
+  // Add click event to ALL apply buttons
+  applyBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  // Close handlers
   closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', closeModal);
 
-  // Close when pressing Escape key
+  // Close with Escape key
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
       closeModal();
     }
   });
 });
 </script>
 <!-- Application form script -->
+<!-- Promotion pop up script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const promoPopup = document.getElementById('promoPopup');
+  const closePromoBtn = document.getElementById('closePromoBtn');
+  
+  // Check if promotion was already shown
+  if (!localStorage.getItem('promoShown')) {
+    // Show after 1 second delay
+    setTimeout(() => {
+      document.body.classList.add('promo-active');
+      promoPopup.classList.add('active');
+      localStorage.setItem('promoShown', 'true');
+    }, 1000);
+  }
+
+  // Close button
+  closePromoBtn.addEventListener('click', function() {
+    document.body.classList.remove('promo-active');
+    promoPopup.classList.remove('active');
+  });
+
+  // Close when clicking outside
+  document.querySelector('.promo-overlay').addEventListener('click', function() {
+    document.body.classList.remove('promo-active');
+    promoPopup.classList.remove('active');
+  });
+});
+</script>
+<!-- Promotion pop up script -->
  <!-- application form -->
     <div class="apply-modal" id="applyModal">
   <div class="modal-overlay"></div>
@@ -1094,6 +1135,27 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
   <!-- application form -->
+
+  <!-- Promotion Popup -->
+
+
+<div class="promo-popup" id="promoPopup">
+  <div class="promo-overlay"></div>
+  <div class="promo-container">
+    <div class="promo-content">
+      <button class="close-promo" id="closePromoBtn">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <div class="promo-image-container">
+        <img src="./assets/images/certHE-flyer.png" alt="Special Promotion" class="promo-image">
+      </div>
+      <a href="#" class="btn has-before promo-btn">
+        <span class="span">Claim Offer</span>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- Promotion Popup -->
 </body>
 
 </html>
