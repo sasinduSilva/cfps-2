@@ -96,14 +96,14 @@
             <a href="#" class="navbar-link" data-nav-link>Contact</a>
           </li>
 
-          <li class="navbar-item dropdown">
-            <a href="" class="navbar-link" data-nav-link>More ▾</a>
-             <ul class="dropdown-menu">
-              <li><a class="navbar-link" href="#llb">Student Life</a></li>
-              <li><a class="navbar-link" href="#llm">Scholarships</a></li>
-              <li><a class="navbar-link" href="#certificates">Events</a></li>
-              <li><a class="navbar-link" href="#certificates">Career Pathways</a></li>
-              <li><a class="navbar-link" href="#certificates">Student Loans</a></li>
+          <li class="navbar-item dropdown" data-dropdown>
+            <a href="" class="navbar-link" data-nav-link data-dropdown-button>More <ion-icon name="chevron-down-outline" class="dropdown-icon"></ion-icon></a>
+             <ul class="dropdown-menu" data-dropdown-menu>
+              <li><a class="navbar-link dropdown-item" href="#llb">Student Life</a></li>
+              <li><a class="navbar-link dropdown-item" href="#llm">Scholarships</a></li>
+              <li><a class="navbar-link dropdown-item" href="#certificates">Events</a></li>
+              <li><a class="navbar-link dropdown-item" href="#certificates">Career Pathways</a></li>
+              <li><a class="navbar-link dropdown-item" href="#certificates">Student Loans</a></li>
             </ul>
           </li>
 
@@ -1066,6 +1066,53 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <!-- Promotion pop up script -->
+
+<!-- Drop Down Script -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Dropdown functionality
+  const dropdowns = document.querySelectorAll('[data-dropdown]');
+  
+  dropdowns.forEach(dropdown => {
+    const button = dropdown.querySelector('[data-dropdown-button]');
+    const menu = dropdown.querySelector('[data-dropdown-menu]');
+    
+    // Click handler
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      dropdown.classList.toggle('active');
+      
+      // Close other open dropdowns
+      document.querySelectorAll('[data-dropdown].active').forEach(otherDropdown => {
+        if (otherDropdown !== dropdown) {
+          otherDropdown.classList.remove('active');
+        }
+      });
+    });
+  });
+  
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('[data-dropdown]')) {
+      document.querySelectorAll('[data-dropdown].active').forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    }
+  });
+  
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('[data-dropdown].active').forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    }
+  });
+});
+</script>
+
+ <!-- Drop Down Script -->
  <!-- application form -->
     <div class="apply-modal" id="applyModal">
   <div class="modal-overlay"></div>
