@@ -40,6 +40,9 @@
   <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
   <link rel="preload" as="image" href="./assets/images/hero-shape-1.svg">
   <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
+  <link rel="preload" as="image" href="./assets/images/cfps-hero-banner-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/cfps-hero-banner-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/grad-pic1.jpg">
 
 </head>
 
@@ -99,8 +102,9 @@
           <li class="navbar-item dropdown">
             <a href="#" class="navbar-link" data-nav-link>More ▾</a>
              <ul class="dropdown-menu">
-              <li><a class="navbar-link" href="./student-life.html">Student Life</a></li>
-              <li><a class="navbar-link" href="#llm">Scholarships</a></li>
+              <li><a class="navbar-link" href="#student-life">Student Life</a></li>
+              <li><a class="navbar-link" href="https://myfees.lk/?schoolid=168">Student Fees</a></li>
+              <li><a class="navbar-link" href="#scholarship">Scholarships</a></li>
               <li><a class="navbar-link" href="#events">Events</a></li>
               <li><a class="navbar-link" href="#certificates">Career Pathways</a></li>
               <li><a class="navbar-link" href="#certificates">Student Loans</a></li>
@@ -552,6 +556,57 @@
   
 </section>
 
+<!-- Scholarships -->
+ <!-- ====== SCHOLARSHIP SECTION ====== -->
+<section class="section scholarship" id="scholarship" aria-label="scholarships">
+  <div class="container">
+
+    <p class="section-subtitle">Financial Support</p>
+
+    <h2 class="h2 section-title">
+      Scholarships <span class="span">Available</span>
+    </h2>
+
+    <div class="scholarship-card">
+      <div class="card-image">
+        <img src="./assets/images/scholarships2.png" width="600" height="400" loading="lazy" 
+             alt="CFPS Scholarship Opportunities" class="img-cover">
+      </div>
+
+      <div class="card-content">
+        <h3 class="h3">CFPS Law School Scholarships</h3>
+        <p class="card-text">
+          We offer merit-based and need-based scholarships to outstanding students pursuing legal education. 
+          Our scholarship program covers up to 100% of tuition fees for exceptional candidates demonstrating 
+          academic excellence and leadership potential in the field of law.
+        </p>
+        <ul class="card-list">
+          <li class="list-item">
+            <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+            <span>Merit Scholarships for top performers</span>
+          </li>
+          <li class="list-item">
+            <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+            <span>Need-based financial aid</span>
+          </li>
+          <li class="list-item">
+            <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+            <span>Special scholarships for women in law</span>
+          </li>
+        </ul>
+        <div class="card-actions">
+          <a href="#" class="btn has-before">
+            <span class="span">Apply Now</span>
+            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+          </a>
+          <a href="#" class="text-btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+ <!-- Scholarships -->
 
       <!-- 
         - #EVENTS
@@ -665,6 +720,82 @@
 
         </div>
       </section>
+
+  <!-- ====== STUDENT LIFE SECTION ====== -->
+<section class="section student-life has-bg-image" id="student-life" aria-label="student life" 
+         style="background-image: url('./assets/images/student-life-bg.jpg')">
+  <div class="container">
+
+    <!-- Background Carousel -->
+    <div class="bg-carousel">
+      <div class="carousel-slide active" style="background-image: url('./assets/images/grad-pic1.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('./assets/images/cfps-hero-banner-1.jpg')"></div>
+      <div class="carousel-slide" style="background-image: url('./assets/images/cfps-hero-banner-2.jpg')"></div>
+    </div>
+
+    <!-- Content Overlay -->
+    <div class="content-overlay">
+
+      <p class="section-subtitle">Beyond the Classroom</p>
+
+      <h2 class="h2 section-title">
+        Student <span class="span">Life</span>
+      </h2>
+
+      <!-- Student Life Categories -->
+      <div class="student-life-grid">
+
+        <!-- Clubs & Societies -->
+        <div class="life-card">
+          <div class="card-icon">
+            <ion-icon name="people-circle-outline"></ion-icon>
+          </div>
+          <h3 class="h3">Clubs & Societies</h3>
+          <p class="card-text">
+            Join our 20+ student organizations including Law Society, Moot Court, and Legal Aid Clinic
+          </p>
+          <a href="#" class="card-link">
+            <span>Explore Clubs</span>
+            <ion-icon name="arrow-forward"></ion-icon>
+          </a>
+        </div>
+
+        <!-- Sports -->
+        <div class="life-card">
+          <div class="card-icon">
+            <ion-icon name="trophy-outline"></ion-icon>
+          </div>
+          <h3 class="h3">Sports</h3>
+          <p class="card-text">
+            Competitive teams and recreational sports including cricket, football, and badminton
+          </p>
+          <a href="#" class="card-link">
+            <span>View Sports</span>
+            <ion-icon name="arrow-forward"></ion-icon>
+          </a>
+        </div>
+
+        <!-- Achievements -->
+        <div class="life-card">
+          <div class="card-icon">
+            <ion-icon name="medal-outline"></ion-icon>
+          </div>
+          <h3 class="h3">Achievements</h3>
+          <p class="card-text">
+            Celebrating student successes in competitions, research, and community service
+          </p>
+          <a href="#" class="card-link">
+            <span>See Achievements</span>
+            <ion-icon name="arrow-forward"></ion-icon>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
    
 
@@ -1174,6 +1305,37 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <!-- Promotion pop up script -->
 
+<!-- student life script -->
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.carousel-slide');
+  let currentSlide = 0;
+  
+  function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+  
+  // Auto-rotate every 5 seconds
+  setInterval(() => {
+    showSlide(currentSlide + 1);
+  }, 1000);
+  
+  // Pause on hover
+  const carousel = document.querySelector('.bg-carousel');
+  carousel.addEventListener('mouseenter', () => {
+    clearInterval(interval);
+  });
+  
+  carousel.addEventListener('mouseleave', () => {
+    interval = setInterval(() => {
+      showSlide(currentSlide + 1);
+    }, 5000);
+  });
+});
+</script>
+<!-- student life script -->
 
  <!-- application form -->
     <div class="apply-modal" id="applyModal">
