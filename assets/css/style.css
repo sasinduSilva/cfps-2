@@ -1496,6 +1496,147 @@ body {
   #SCHOLARSHIP
 \*-----------------------------------*/
 
+/*------------------------------------*\
+  #CONTACT-US
+\*------------------------------------*/
+
+.contact {
+  background-color: var(--white);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 20px;
+}
+
+.input-field {
+  background-color: var(--isabelline);
+  border: 1px solid var(--platinum);
+  border-radius: var(--radius-5);
+  padding: 15px 20px;
+  font-size: var(--fs-6);
+  width: 100%;
+  transition: var(--transition-1);
+}
+
+.input-field:focus {
+  border-color: var(--kappel);
+  outline: none;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-title {
+  color: var(--eerie-black-1);
+  margin-bottom: 10px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.card-icon {
+  background-color: var(--isabelline);
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-circle);
+  color: var(--kappel);
+  font-size: 20px;
+  flex-shrink: 0; /* Prevents icon from shrinking */
+  margin-top: 3px; /* Fine-tune vertical alignment */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50px; /* Match icon height */
+}
+
+.card-title {
+  color: var(--eerie-black-1);
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.card-link, .card-address {
+  color: var(--gray-web);
+  transition: var(--transition-1);
+  line-height: 1.4;
+}
+
+.card-link:hover {
+  color: var(--kappel);
+}
+
+.card-address {
+  font-style: normal;
+}
+
+.social-list {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-link {
+  background-color: var(--isabelline);
+  color: var(--eerie-black-1);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-circle);
+  transition: var(--transition-1);
+}
+
+.social-link:hover {
+  background-color: var(--kappel);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .input-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/*------------------------------------*\
+  #CONTACT-US
+\*------------------------------------*/
+
 /* test */
 
 /*-----------------------------------*\
