@@ -1586,7 +1586,7 @@ body {
 }
 
 .card-link, .card-address {
-  color: var(--gray-web);
+  color: var(--black_80);
   transition: var(--transition-1);
   line-height: 1.4;
 }
