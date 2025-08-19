@@ -1137,13 +1137,22 @@ body {
 
 .testimonials {
   background-color: var(--isabelline);
+  overflow: hidden; /* Prevent vertical scrollbar from appearing */
+}
+
+.testimonials-scroll-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding-bottom: 20px; /* Space for scrollbar */
+  margin-top: 40px;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex; /* Changed from grid to inline-flex */
   gap: 30px;
-  margin-top: 40px;
+  padding: 10px 0; /* Add some vertical padding */
+  width: max-content; /* Allow the container to expand with content */
+  margin: 0 auto;
 }
 
 .testimonial-card {
@@ -1152,6 +1161,21 @@ body {
   border-radius: var(--radius-10);
   box-shadow: var(--shadow-2);
   transition: var(--transition-2);
+  width: 300px; /* Set a minimum width for each card */
+  flex-shrink: 0; /* Prevent cards from shrinking */
+}
+
+.testimonials-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.testimonials-scroll-container::-webkit-scrollbar-track {
+  background: var(--isabelline);
+}
+
+.testimonials-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--kappel);
+  border-radius: 10px;
 }
 
 .testimonial-card:hover {
@@ -1221,6 +1245,7 @@ body {
 
 @media (max-width: 768px) {
   .testimonial-card {
+    min-width: 280px; /* Slightly smaller cards on mobile */
     padding: 25px;
   }
   
