@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $mail->isSMTP();
     $mail->SMPTPAuth = true;
-    $mail->Host = "mail.thelanka.net"
+    $mail->Host = "mail.cfpslawschool.net"
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
     $mail->Username = "riyard@thelanka.net"

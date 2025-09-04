@@ -458,106 +458,69 @@
   #APPLICATION MODAL
 \*-----------------------------------*/
 
-.apply-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition-2);
+.application {
+  background-color: var(--isabelline);
+  padding: 80px 0;
 }
 
-.apply-modal.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--black_80);
-  z-index: 1;
-}
-
-.modal-content {
-  position: relative;
-  background-color: var(--white);
-  width: 95%;
-  max-width: 600px;
-  max-height: 90vh;
-  overflow-y: auto;
-  border-radius: var(--radius-10);
-  box-shadow: var(--shadow-3);
-  z-index: 2;
-  padding: 30px;
-  transform: translateY(50px);
-  transition: var(--transition-2);
-}
-
-.apply-modal.active .modal-content {
-  transform: translateY(0);
-}
-
-.close-modal {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: var(--gray-web);
-  cursor: pointer;
-  transition: var(--transition-1);
-}
-
-.close-modal:hover {
-  color: var(--radical-red);
-  transform: rotate(90deg);
-}
-
-.modal-header {
+.application-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
-.modal-header h3 {
-  color: var(--eerie-black-1);
-  margin-bottom: 10px;
+.application-header .section-title {
+  margin-bottom: 15px;
 }
 
-.modal-header p {
+.application-header .section-text {
+  max-width: 600px;
+  margin: 0 auto;
   color: var(--gray-web);
 }
 
 .application-form {
-  display: grid;
-  gap: 20px;
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: var(--radius-10);
+  box-shadow: var(--shadow-2);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.form-group {
+.form-section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--platinum);
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 30px;
+}
+
+.form-section-title {
+  color: var(--eerie-black-1);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--kappel);
+}
+
+.application-form .form-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-bottom: 20px;
 }
 
-.form-group label {
+.application-form .form-group label {
   font-size: var(--fs-6);
   font-weight: var(--fw-500);
   color: var(--eerie-black-1);
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.application-form .form-group input,
+.application-form .form-group select,
+.application-form .form-group textarea {
   padding: 12px 15px;
   border: 1px solid var(--platinum);
   border-radius: var(--radius-5);
@@ -566,37 +529,97 @@
   transition: var(--transition-1);
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.application-form .form-group input:focus,
+.application-form .form-group select:focus,
+.application-form .form-group textarea:focus {
   border-color: var(--kappel);
   outline: none;
   box-shadow: 0 0 0 3px hsla(var(--color, 170, 75%, 41%), 0.1);
 }
 
-.form-row {
+.application-form .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 20px;
+}
+
+.checkbox-group {
+   display: flex;
+  align-items: flex-start; /* Changed from center to flex-start */
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  flex-shrink: 0; /* Prevents checkbox from shrinking */
+  margin-top: 2px; /* Perfect vertical alignment with text */
+}
+
+.checkbox-group label {
+   margin-bottom: 0;
+  font-weight: var(--fw-400);
+  line-height: 1.4; /* Better text alignment */
+  flex: 1;
+}
+
+.text-link {
+  color: var(--kappel);
+  text-decoration: underline;
+  transition: var(--transition-1);
+}
+
+.text-link:hover {
+  color: var(--radical-red);
 }
 
 .form-footer {
-  margin-top: 20px;
   text-align: center;
+  margin-top: 30px;
+}
+
+.form-note {
+  color: var(--gray-web);
+  font-size: var(--fs-7);
+  margin-top: 15px;
 }
 
 /* Responsive adjustments */
-@media (max-width: 575px) {
-  .modal-content {
+@media (max-width: 768px) {
+  .application {
+    padding: 60px 0;
+  }
+  
+  .application-form {
+    padding: 30px 25px;
+  }
+  
+  .application-form .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .form-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .application-form {
     padding: 25px 20px;
   }
   
-  .form-row {
-    grid-template-columns: 1fr;
+  .checkbox-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
   
-  .form-footer .btn {
-    width: 100%;
+  .application-header .section-text {
+    font-size: var(--fs-6);
   }
 }
 
